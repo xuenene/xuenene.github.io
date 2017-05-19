@@ -90,12 +90,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="好久没刷题了，心血来潮想来一发Codeforces，提前10小时报了名试试水，但还是不出意料地把这件事给忘了。。。 好吧，既然决定要做就补起来吧。 很顺利地秒了ABCD。一开始被D题吓到了，以为是N个点，没有一点想法，本以为自己回到大二水平还是只能做前三道。突然发现找不到N的范围，不对啊，Codefoces一向以严谨著称从不会犯这种低级错误，这时瞄到了一个醒目的的 Three。。。顿时觉得这题就是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeForces 340 (Div. 2)">
+<meta property="og:url" content="http://yoursite.com/2016/01/25/CodeForces(340_2)/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="好久没刷题了，心血来潮想来一发Codeforces，提前10小时报了名试试水，但还是不出意料地把这件事给忘了。。。 好吧，既然决定要做就补起来吧。 很顺利地秒了ABCD。一开始被D题吓到了，以为是N个点，没有一点想法，本以为自己回到大二水平还是只能做前三道。突然发现找不到N的范围，不对啊，Codefoces一向以严谨著称从不会犯这种低级错误，这时瞄到了一个醒目的的 Three。。。顿时觉得这题就是">
+<meta property="og:updated_time" content="2017-05-19T14:54:29.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="CodeForces 340 (Div. 2)">
+<meta name="twitter:description" content="好久没刷题了，心血来潮想来一发Codeforces，提前10小时报了名试试水，但还是不出意料地把这件事给忘了。。。 好吧，既然决定要做就补起来吧。 很顺利地秒了ABCD。一开始被D题吓到了，以为是N个点，没有一点想法，本以为自己回到大二水平还是只能做前三道。突然发现找不到N的范围，不对啊，Codefoces一向以严谨著称从不会犯这种低级错误，这时瞄到了一个醒目的的 Three。。。顿时觉得这题就是">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/01/25/CodeForces(340_2)/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>CodeForces 340 (Div. 2) | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,9 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -240,298 +242,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/22/LeetCode(1-4)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xuenene">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/22/LeetCode(1-4)/" itemprop="url">LeetCode(1-4)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-22T13:51:44+08:00">
-                2016-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>My first time to write complete solutions in English.</p>
-<h3 id="1-Two-Sum-Easy"><a href="#1-Two-Sum-Easy" class="headerlink" title="#1. Two Sum (Easy)"></a>#1. Two Sum (Easy)</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution.</p>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p>
-<h4 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h4><p>Of course you can use “double loop” to solve this problem easily, and the time complexity of this solution is \(O(N^2)\). More efficiently, for each number, you can also use “map” to find out the rest of target in \(O(\log_2N)\) time complexity, so the time complexity of the second solution is \(O(NlogN)\). If you don’t want to use map, you can use an \(O(N\log_2N)\) time complexity algorithm to get the answer after sorting.</p>
-<ol>
-<li>Initialize two indices – one indexes the first number(index1), and the other indexes the last(index2).</li>
-<li>Make a comparison between the target and the sum of the two indexed number.</li>
-</ol>
-<p>Since the the time complexity of quick sort is \(O(N\log_2N)\), the time complexity of this solution is \(O(N\log_2N)\).</p>
-<h4 id="cpp-code"><a href="#cpp-code" class="headerlink" title="cpp_code"></a>cpp_code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keyword">int</span> MAXN = <span class="number">100005</span>;</div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></div><div class="line">        <span class="keyword">int</span> num, id;</div><div class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node &amp;other) <span class="keyword">const</span> &#123;</div><div class="line">            <span class="keyword">return</span> num &lt; other.num;</div><div class="line">        &#125;</div><div class="line">    &#125;p[MAXN];</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="keyword">int</span> len = nums.size();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</div><div class="line">            p[i].num = nums[i];</div><div class="line">            p[i].id = i;</div><div class="line">        &#125;</div><div class="line">        sort(p, p + len);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>, j = len - <span class="number">1</span>; i &lt; j; ) &#123;</div><div class="line">            <span class="keyword">if</span>(p[i].num + p[j].num == target) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;p[i].id, p[j].id&#125;;</div><div class="line">            &#125;</div><div class="line">            p[i].num + p[j].num &gt; target? --j: ++i;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="2-Add-Two-Numbers-Medium"><a href="#2-Add-Two-Numbers-Medium" class="headerlink" title="#2. Add Two Numbers (Medium)"></a>#2. Add Two Numbers (Medium)</h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
-<p>Output: 7 -&gt; 0 -&gt; 8</p>
-<h4 id="Analysis-1"><a href="#Analysis-1" class="headerlink" title="Analysis"></a>Analysis</h4><p>Have you ever solved the problem of “Big Number A + B” ? Solve it in the same way. Link-List may be more difficult than array, be careful. Actually, the input gives two reversed strings of number, which makes the problem easier, so you don’t need to reverse it again.</p>
-<h4 id="cpp-code-1"><a href="#cpp-code-1" class="headerlink" title="cpp_code"></a>cpp_code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode *next;</div><div class="line"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> temp = l1-&gt;val + l2-&gt;val;</div><div class="line">		ListNode *root = <span class="keyword">new</span> ListNode(temp % <span class="number">10</span>);</div><div class="line">		ListNode *p = root;</div><div class="line">		<span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">			<span class="keyword">if</span> (l1-&gt;next != <span class="literal">NULL</span> &amp;&amp; l2-&gt;next != <span class="literal">NULL</span>) &#123;</div><div class="line">				l1 = l1-&gt;next;</div><div class="line">				l2 = l2-&gt;next;</div><div class="line">				temp = l1-&gt;val + l2-&gt;val + temp / <span class="number">10</span>;</div><div class="line">				p-&gt;next = <span class="keyword">new</span> ListNode(temp % <span class="number">10</span>);</div><div class="line">				p = p-&gt;next;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (l1-&gt;next != <span class="literal">NULL</span> &amp;&amp; l2-&gt;next == <span class="literal">NULL</span>) &#123;</div><div class="line">				l1 = l1-&gt;next;</div><div class="line">				temp = l1-&gt;val + temp / <span class="number">10</span>;</div><div class="line">				p-&gt;next = <span class="keyword">new</span> ListNode(temp % <span class="number">10</span>);</div><div class="line">				p = p-&gt;next;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (l1-&gt;next == <span class="literal">NULL</span> &amp;&amp; l2-&gt;next != <span class="literal">NULL</span>) &#123;</div><div class="line">				l2 = l2-&gt;next;</div><div class="line">				temp = l2-&gt;val + temp / <span class="number">10</span>;</div><div class="line">				p-&gt;next = <span class="keyword">new</span> ListNode(temp % <span class="number">10</span>);</div><div class="line">				p = p-&gt;next;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> &#123;</div><div class="line">				<span class="keyword">if</span>(temp / <span class="number">10</span>) &#123;</div><div class="line">					p-&gt;next = <span class="keyword">new</span> ListNode(temp / <span class="number">10</span>);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> root;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="3-Longest-Substring-Without-Repeating-Characters-Medium"><a href="#3-Longest-Substring-Without-Repeating-Characters-Medium" class="headerlink" title="#3 Longest Substring Without Repeating Characters (Medium)"></a>#3 Longest Substring Without Repeating Characters (Medium)</h3><h4 id="Decription"><a href="#Decription" class="headerlink" title="Decription"></a>Decription</h4><p>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.</p>
-<h4 id="Analysis-2"><a href="#Analysis-2" class="headerlink" title="Analysis"></a>Analysis</h4><p>The obvious solution is to check every substring is legal or not. The time complexity of enumeration is \(O(N^2)\). You can find that some substring is unnecessary to check. For instance, “abcabcbb”, when you find that the substring “cabc” is illegal, you can also assert that the substring “bcsbc” which has the substring “cabc” is also illegal, “cabcb” is alike. So you are only required to check the substring whose first character and last character are same, and the others are unique.</p>
-<ol>
-<li>Initialize two indices to indict the current substring. One indexes the begin(index1), and the other indexes the end(index2 + 1).</li>
-<li>Build a hash-array to record the current location of each character, 256-Length is enough. Record -1 indicts that character is out of current substring.</li>
-</ol>
-<h4 id="cpp-code-2"><a href="#cpp-code-2" class="headerlink" title="cpp_code"></a>cpp_code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="keyword">const</span> <span class="keyword">static</span> <span class="keyword">int</span> MAXN = <span class="number">256</span>;</div><div class="line">	<span class="keyword">int</span> mhash[MAXN];</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> len = s.length();</div><div class="line">		<span class="built_in">memset</span>(mhash, <span class="number">-1</span>, <span class="keyword">sizeof</span>(mhash));</div><div class="line">		<span class="keyword">int</span> p1 = <span class="number">0</span>, ans = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> p2 = <span class="number">0</span>; p2 &lt; len; ++p2) &#123;</div><div class="line">			<span class="keyword">if</span> (mhash[s[p2]] != <span class="number">-1</span>) &#123;</div><div class="line">				ans = max(ans, p2 - p1);</div><div class="line">				<span class="keyword">for</span> (; p1 &lt;= mhash[s[p2]]; ++p1) &#123;</div><div class="line">					mhash[s[p1]] = <span class="number">-1</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			mhash[s[p2]] = p2;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> max(ans, len - p1);</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="4-Median-of-Two-Sorted-Arrays-Hard"><a href="#4-Median-of-Two-Sorted-Arrays-Hard" class="headerlink" title="#4. Median of Two Sorted Arrays (Hard)"></a>#4. Median of Two Sorted Arrays (Hard)</h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be \(O(\log_2(M+N))\)</p>
-<h4 id="Analysis-3"><a href="#Analysis-3" class="headerlink" title="Analysis"></a>Analysis</h4><p>Your can use quick sort to resort the union of the two arrays, then return the median, the complexity of this solution is<br>\(O((M+N)\log_2(M+N))\)</p>
-<p>More efficiently, since the arrays are ordered, you<br>can merge these two arrays in<br>\(O(M+N)\) time complexity, like a sub-operation of merge sort. These two solutions both can get an ordered union array, then return the median as the problem describing.</p>
-<p>Here is a solution in \(O(\log_2M*\log_2N)\) time complexity.</p>
-<ol>
-<li>Assume that the volume of union of two arrays is an odd number, we can easy to assert that there must be a number in nums1 or nums2 which can be the median of union. So, find out it!</li>
-<li>Assume that the median is in nums1.</li>
-<li>Binary search the quasi-median in nums1, then check nums2 (also a binary-search) and sum up the total number of the union’s element which would be the left of the quasi-median(smaller than quasi-median), calculate the right ones(larger than quasi-median).</li>
-<li>Compare the number of left with the number of right.</li>
-<li>If the median is not in nums1, swap the position of nums1 and nums2, do double-loop binary-search again. That is to say, assume that the median is in nums2, search its quasi-position in nums1.</li>
-<li>It’s a little difficult when the volume of union is an even number. There must be two numbers to define the median. So we should find out these two numbers.</li>
-<li>We can solve it in a similar way as an odd volume.</li>
-<li>If the leftMedian and rightMedian are not both definite, record the definite one and do it again after swapping.</li>
-<li>However, the above solution only considered that each number in the union is unique. Do some little trick as the following code showing.</li>
-</ol>
-<h4 id="cpp-code-3"><a href="#cpp-code-3" class="headerlink" title="cpp_code"></a>cpp_code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">isMedian</span><span class="params">(<span class="keyword">int</span> index1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> n1 = nums1.size(), n2 = nums2.size();</div><div class="line">		<span class="keyword">int</span> index2 = upper_bound(nums2.begin(), nums2.end(), nums1[index1]) - nums2.begin();</div><div class="line">		<span class="keyword">int</span> le1 = index1 + index2, ri1 = n1 + n2 - le1 - <span class="number">1</span>;</div><div class="line">		index2 = lower_bound(nums2.begin(), nums2.end(), nums1[index1]) - nums2.begin();</div><div class="line">		<span class="keyword">int</span> le2 = index1 + index2, ri2 = n1 + n2 - le2 - <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (le1 - ri1 &gt;= <span class="number">0</span> &amp;&amp; le2 - ri2 &lt;= <span class="number">0</span>) &#123;</div><div class="line">		    <span class="keyword">if</span>((le1 - ri1) &amp; <span class="number">1</span>) &#123;</div><div class="line">		        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">		    &#125;</div><div class="line">			<span class="keyword">return</span> (n1 + n2) &amp; <span class="number">1</span> ^ <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="built_in">abs</span>(le1 - ri1) &lt; <span class="built_in">abs</span>(le2 - ri2) ? le1 - ri1 : le2 - ri2;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">oddCheck</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> le = <span class="number">0</span>, ri = nums1.size() - <span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span> (; le &lt;= ri;) &#123; <span class="keyword">int</span> mid = ((le + ri) &gt;&gt; <span class="number">1</span>);</div><div class="line">			<span class="keyword">int</span> ret = isMedian(mid, nums1, nums2);</div><div class="line">			<span class="keyword">if</span> (ret &gt; <span class="number">0</span>) &#123;</div><div class="line">				ri = mid - <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (ret &lt; <span class="number">0</span>) &#123;</div><div class="line">				le = mid + <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> &#123;</div><div class="line">				<span class="keyword">return</span> mid;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">evenCheck</span><span class="params">(pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;&amp; ans, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> le = <span class="number">0</span>, ri = nums1.size() - <span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span> (; le &lt;= ri;) &#123; <span class="keyword">int</span> mid = ((le + ri) &gt;&gt; <span class="number">1</span>);</div><div class="line">			<span class="keyword">int</span> ret = isMedian(mid, nums1, nums2);</div><div class="line">			<span class="keyword">if</span> (ret &gt; <span class="number">0</span>) &#123;</div><div class="line">				ri = mid - <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (ret &lt; <span class="number">0</span>) &#123;</div><div class="line">				le = mid + <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> &#123;</div><div class="line">			    ans.first = ans.second = nums1[mid];</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(ret == <span class="number">1</span>)&#123;</div><div class="line">				ans.first = nums1[mid];</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (ret == <span class="number">-1</span>) &#123;</div><div class="line">				ans.second = nums1[mid];</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(ans.first != <span class="number">-1</span> &amp;&amp; ans.second != <span class="number">-1</span>) &#123;</div><div class="line">			    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> n1 = nums1.size(), n2 = nums2.size();</div><div class="line">		<span class="keyword">if</span> ((n1 + n2) &amp; <span class="number">1</span>) &#123;</div><div class="line">			<span class="keyword">int</span> index1 = oddCheck(nums1, nums2);</div><div class="line">			<span class="keyword">if</span> (index1 != <span class="number">-1</span>) &#123;</div><div class="line">				<span class="keyword">return</span> nums1[index1];</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span> nums2[oddCheck(nums2, nums1)];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> &#123;</div><div class="line">			pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pr(<span class="number">-1</span>, <span class="number">-1</span>);</div><div class="line">			<span class="keyword">bool</span> ans = evenCheck(pr, nums1, nums2);</div><div class="line">			<span class="keyword">if</span> (ans == <span class="literal">false</span>) &#123;</div><div class="line">				evenCheck(pr, nums2, nums1);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span> (pr.first + pr.second) / <span class="number">2.0</span>;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/谈谈反智主义/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xuenene">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/02/15/谈谈反智主义/" itemprop="url">谈谈反智主义</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-15T04:23:44+08:00">
-                2016-02-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>曾经对某些可用一些现象描述的社会群体性意识无法用简单的语言概括，直到我看到了这一个词——<a href="http://baike.baidu.com/link?url=_-h3wVGXyOtP7iR516-SjnBoQr7Al0OLZbHI3Ib5DlhEPmJMgfG-kbM__k93DpJXfqtbs-BnrveJ2hfcw1alJq" target="_blank" rel="external">反智主义（anti-intellectualism）</a>。</p>
-<p>反智主义最广义的表现形式是对传统深信不疑、对未知世界的不屑以及读书无用论。</p>
-<p>时常听到人们抱怨国家大力发展高科技而忽略民生，许多贫困山区的人饭都吃不饱。远的不谈，就谈最近被官方确认的“引力波”，也被许多人质疑发现这种“虚无缥缈”的东西的必要性。其实早在100多年前，麦克斯韦发现电磁波时也受到过类似质疑。</p>
-<p>听够了民间的声音，再来看看NASA的官方态度：<a href="http://www.nasa.gov/missions/solarsystem/Why_We_01pt1.html" target="_blank" rel="external"><em>The Importance of Exploration &amp; Why We Explore</em></a></p>
-<p>尝试着译了其中的几段。</p>
-<p><strong>原文：</strong></p>
-<blockquote>
-<p><em>As historian Stephen J. Pyne has argued, “Exploration is a specific invention of specific civilizations conducted at specific historical times. It is not … a universal property of all human societies. Not all cultures have explored or even traveled widely. Some have been content to exist in xenophobic isolation.”</em></p>
-<p><em>There is a value judgment in that last sentence – that xenophobia and isolation are bad, but that they are in fact bad, I think, is borne out by history. The case most often cited for a societal decision not to explore – with generally recognized bad effects – is Ming China in the 15th century. You will find this case, for example, made in Bob Zubrin’s books on Mars, and before that made by NASA Administrator James Beggs. Is it hype, or is it history?</em></p>
-<p><em>The historical facts are quite clear. Historian Daniel Boorstin – the recently deceased Librarian of Congress – pointed out that in the early 15th century the biggest Chinese ships were up to ten times the size of Columbus’s later in the century. While Columbus had 17 ships and 1500 men on the largest of his four expeditions, the Chinese Admiral Zheng He had 317 ships and 27,000 crewmen on the first of his six expeditions. Following a maritime tradition stretching back to the 11th century, from 1405-1433, these ships plied the seas of Southeast Asia, sailed to India, the Persian Gulf, the Red Sea and down the East Coast of Africa.</em></p>
-<p><em>But what is important is this. Although Chinese state revenues were probably 100 times Portugal’s, after the 1430s the Ming emperors had other priorities, and it was the Portuguese and other European countries that led the way in exploration. As Boorstin noted “When Europeans were sailing out with enthusiasm and high hopes, land-bound China was sealing her borders. Within her physical and intellectual Great Wall, she avoided encounter with the unexpected …. Fully equipped with the technology, the intelligence, and the national resources to become discoverers, the Chinese doomed themselves to be discovered.”</em></p>
-<p><em>In their recent world history, historians J. R. and William McNeill come to the same conclusions, and historians in general tend to agree that the Chinese chose poorly in the mid-15th century. By the 1470s, the McNeils wrote, even the skills needed to build great ships were lost. Boorstin called the withdrawal of the Chinese into their own borders, symbolized by the Great Wall of China that took its current form at that time, “catastrophic … with consequences we still see today.” The parallel with what is happening now, despite renewed attempts at space exploration, is striking. Some day historians will be writing about whether or not WE chose wisely, not only to make a proposal to explore, but also to fund it.</em></p>
-</blockquote>
-<p><strong>译文：</strong></p>
-<blockquote>
-<p><em>历史学家Stephen J. Pyne称，“科学探索是在特定历史背景下的特定文明所催生出的一种特殊创造力。它不是所有人类社会普遍意义上的共同财富。并不是所有的文化都愿意进行广泛的科学探索。一些文化则满足于盲目排外而孤立存在。”</em></p>
-<p><em>上文最后一句话中有一个价值观的判断——我认为盲目排外而孤立存在是不好的，历史证明事实上的确如此。一个社会决定不再进行科学探索后将会产生一些坏的影响，这些影响已经被世界所公认。一个经常被拿来援引的例子——15世纪的中国明朝。很多地方都能看到这个例子，如Bob Zubrin的书中，在这之前，NASA的管理者James Beggs也提及过。这是炒作吗？或者说这是历史吗？</em></p>
-<p><em>历史事实是相当明朗的。历史学家Daniel Boorstin——已故前美国国会图书馆馆长——指出在15世纪初，中国最大的船的尺寸几乎十倍于世纪末哥伦布的船。哥伦布的四次远征中最大的一次带领了17艘船和1500个男性，而中国的舰队指挥官郑和在六次远征中的第一次便拥有317艘船和27000多个舰员。追溯那段从11世纪流传下来的航海历史，在1405-1433年间，这些船往返东南亚的海上，航行到印度，波斯湾，红海，再到非洲的东海岸。</em></p>
-<p><em>当时中国的国家收入几乎百倍于葡萄牙，但在15世纪30年代，明朝皇帝将重心放于其他方向，也正是此后，葡萄牙及欧洲列国开始了他们对世界的探索。正如Boorstin所说，“当欧洲人正在带着热情和希望远航时，固步自封的中国则愈加封锁了他的疆域。其自恃聪明地修筑了长城作为物理屏障，以此极力避免遭遇一切不可预料的事情……在技术、智力和国家资源等方面拥有着可成为发现者的得天独厚的条件，但中国人宣判了自己只能作为被发现的一方。”</em></p>
-<p><em>历史学家J. R. 和William McNeill得出一个共同的结论———在近代世界史中，中国在15世纪中期选择了一条不明智的道路——这个结论也得到了大部分历史学家的认同。McNeils称，1470年左右，中国人甚至连造大型轮船的技能都失去了。Boorstin称自从中国的长城形成如今的形态之时，中国人开始撤回到自己的疆域内，“这是灾难性的……之后的结果我们现在仍能看到。”与之形成对比的是现在的中国努力进行着太空探索，效果是很显著的。未来的某一天，历史学家们将写道，曾经的我们为什么没有做出明智的选择——不仅应该制定一个关于研究的协议，还应该大力资助它。</em></p>
-</blockquote>
-<p>改善民生固然重要，它是国家和社会维持稳定的基石，其人文意义和社会意义较重。而科技发展则是推动社会进步的强力发动机，没有它，我们或许就会像亿万年前的恐龙一样，除了化石，什么也没留下。</p>
-<p>我们从小被灌输要好好读书，只有读书才能出人头地的思想。这似乎是个不错的开端。但显然，在现阶段的中国，大部分人对学习的追求倒不如说是一种对学历的偏执。换句话说，如果学历可以无差别地用金钱购买，相信没多少人再愿意静下心来去读书学习。</p>
-<p>大学的毛概课没去上过几节，但有一次老师的话让我印象颇深：“我知道你们中大部分人都不信马列主义那一套，但你们知道自己信奉什么主义吗？如果你们答不出来那我就知道了，你们信的是实用主义。大部分实用主义者都说不清自己的想法，什么对我有利我就做什么。譬如你们大部分人都不喜欢这门课但还是来上课了，是因为我要点名。如果我说期末大家都满分，估计就没多少人来上课了。所以很多人并不是来读书的，而是来混学历的。”老师口中的实用主义大概便是利己主义之意。利己主义本身无可厚非，且正是《国富论》中所谈及的“市场经济蓬勃发展之源泉”，殊不知学历仅仅给了我们生存的资本，而这些经历才能引导我们走向理想中的世界。</p>
-<p>尽管国人对学历如此看重，国民整体素质还是不容乐观。有人大致统计过，中国（大陆）人的平均知识水平在初中阶段。也难怪时常听到“数学/英语滚出高考”的声音，甚至还被炒成了微博热门。犹记得一条关于“七成网民赞成将数学踢出高考”的犀利评论：数学就是用来将这七成人筛出去的。这种说法似乎过于偏激和略不友善，可恰恰说明了民意是盲目的，并不能驱动社会朝更好的方向发展，改变社会进程的总是少数人，也说明了独立思考能力是成为一个能产生社会价值的人的必要条件。当然网民的意见仅仅是民意的一种体现方式，其并不能准确代表民意，因为网上存在着大量无民事行为能力人，且大部分网民都处于社会底层。中国人缺很多东西，最不缺的就是满口正义无所事事的键盘侠——他们从不想为社会或者周围的人做出些什么，但却总想要社会朝着他们理想的方向发展。</p>
-<p>许多小概率事件被当成了颠簸不破的真理：博士生给初中肄业生打工，某人吸烟酗酒活了100岁，小学毕业生一跃成为亿万富豪……一半是“我一朋友/同学”干的，另一半是新闻看的。这些莫须有的朋友和奇闻异事成了许多人怒刷存在感的必备工具，且基于此的谈话除了放大这些幸存者偏差之外往往创造不了任何价值——你不会去谈论那些不读书不工作混了半辈子的朋友，同样媒体也不会报道那些司空见惯的平常事。这么看来似乎是媒体朋友给这歪风添了一阵邪气。为了给百姓茶余饭后的谈话加点佐料，真是无所不用其极。</p>
-<p>以色列几乎与中国同时建国（1948年成立），此前没有任何政治基础且自然资源极度贫瘠，但其高等教育普及率高居世界第二，仅次于加拿大（3日本，4美国，5新西兰，6韩国……）。犹太人固然聪明，但中国人的智慧也是世界公认的，只是很多人把聪明用错了地方。他们往往觉得抖机灵的比认真搞学术的要厉害。为此他们不得不刻意编出各种段子来作为对知识分子的嘲讽。</p>
-<p><img src="/img/1/1.png" alt="image"></p>
-<p>且不论段子中所说的阻力、重力、加速度等基础概念是属于初中的还是高中的，博士生是否会为如此问题讨论良久，光是题中所给的“自由落体”的概念我想段子作者都没搞清楚——难以理解如此常识匮乏的段子为什么会引发众人的转发，空虚的他们用自己的无知去讽刺知识分子，这算不算得上是另一种讽刺？如果这仅仅是一条段子也就罢了，大家一笑而过，并不去和一条段子较真，可一些转发的评论中的意思似乎并不只有调侃那么简单——他们或许并没有独立思考的能力，只是想和大多数人站在一起，以缓解某些方面的自卑所带来的压力。</p>
-<p>其实，猫猫狗狗，包括咸鱼，也喜欢和大多数同类待在一起。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -557,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/01/25/CodeForces(340_2)/" itemprop="url">CodeForces 340 (Div. 2)</a></h1>
+          <h1 class="post-title" itemprop="name headline">CodeForces 340 (Div. 2)</h1>
         
 
         <div class="post-meta">
@@ -606,9 +317,7 @@
       
 
       
-        
-          
-            <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>好久没刷题了，心血来潮想来一发Codeforces，提前10小时报了名试试水，但还是不出意料地把这件事给忘了。。。</p>
+        <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>好久没刷题了，心血来潮想来一发Codeforces，提前10小时报了名试试水，但还是不出意料地把这件事给忘了。。。</p>
 <p>好吧，既然决定要做就补起来吧。</p>
 <p>很顺利地秒了ABCD。一开始被D题吓到了，以为是N个点，没有一点想法，本以为自己回到大二水平还是只能做前三道。突然发现找不到N的范围，不对啊，Codefoces一向以严谨著称从不会犯这种低级错误，这时瞄到了一个醒目的的 Three。。。顿时觉得这题就是B题的难度，没想通为什么放那么后面。</p>
 <p>前四道都挺水，这不禁让我开始怀疑Codeforces难度是不是大大调低了。在我本想顺顺利利地AK时E题的出现奠定了一个悲伤的基调。想找一个在线的算法，不出意料地失败了。只写过线段树的数据结构弱渣表示这或许要用一个很碉堡的数据结构来维护，唯一比较确定的是前缀xor和后缀xor应该有用。</p>
@@ -633,20 +342,27 @@
 <h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">100005</span>;</div><div class="line"><span class="keyword">int</span> a[MAXN];</div><div class="line"><span class="keyword">int</span> N, M, K;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></div><div class="line">	<span class="keyword">int</span> l, r;</div><div class="line">	<span class="keyword">int</span> id;</div><div class="line">	<span class="keyword">int</span> block;</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans;</div><div class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node &amp;other) <span class="keyword">const</span> &#123;</div><div class="line">		<span class="keyword">return</span> block != other.block? block &lt; other.block : r &lt; other.r;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">		id = i;</div><div class="line">		<span class="built_in">cin</span> &gt;&gt; l &gt;&gt; r;</div><div class="line">		block = (l - <span class="number">1</span>) / (<span class="keyword">int</span>)<span class="built_in">sqrt</span>(<span class="number">1.0</span>*M);</div><div class="line">	&#125;</div><div class="line">&#125;q[MAXN];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> a.id &lt; b.id;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> le[MAXN], ri[MAXN];</div><div class="line"><span class="keyword">int</span> cnt[<span class="number">1</span> &lt;&lt; <span class="number">20</span>];</div><div class="line"><span class="keyword">bool</span> vis[<span class="number">1</span> &lt;&lt; <span class="number">20</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M &gt;&gt; K) &#123;</div><div class="line">		<span class="built_in">memset</span>(le, <span class="number">0</span>, <span class="keyword">sizeof</span>(le));</div><div class="line">		<span class="built_in">memset</span>(ri, <span class="number">0</span>, <span class="keyword">sizeof</span>(ri));</div><div class="line">		<span class="built_in">memset</span>(cnt, <span class="number">0</span>, <span class="keyword">sizeof</span>(cnt));</div><div class="line">		<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span>(vis));</div><div class="line">		<span class="built_in">memset</span>(q, <span class="number">0</span>, <span class="keyword">sizeof</span>(q));</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) &#123;</div><div class="line">			<span class="built_in">cin</span> &gt;&gt; a[i];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= M; ++i) &#123;</div><div class="line">			q[i].read(i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) &#123;</div><div class="line">			le[i] = le[i - <span class="number">1</span>] ^ a[i];</div><div class="line">		&#125;</div><div class="line">		sort(q + <span class="number">1</span>, q + M + <span class="number">1</span>);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = q[<span class="number">1</span>].l - <span class="number">1</span>; i &lt;= q[<span class="number">1</span>].r; ++i) &#123;</div><div class="line">			cnt[le[i]]++;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">20</span>); ++i) &#123;</div><div class="line">				q[<span class="number">1</span>].ans += <span class="number">1l</span>l * cnt[i] * (cnt[i] - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> &#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">20</span>); ++i) &#123;</div><div class="line">				<span class="keyword">if</span> (!vis[i]) &#123;</div><div class="line">					q[<span class="number">1</span>].ans += <span class="number">1l</span>l * cnt[i] * cnt[i^K];</div><div class="line">					vis[i] = vis[i^K] = <span class="literal">true</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= M; ++i) &#123;</div><div class="line">			q[i].ans = q[i - <span class="number">1</span>].ans;</div><div class="line">			<span class="keyword">if</span> (q[i].r &gt; q[i - <span class="number">1</span>].r) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = q[i - <span class="number">1</span>].r + <span class="number">1</span>; j &lt;= q[i].r; ++j) &#123;</div><div class="line">					q[i].ans += cnt[le[j] ^ K];</div><div class="line">					cnt[le[j]]++;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (q[i].r &lt; q[i - <span class="number">1</span>].r) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = q[i - <span class="number">1</span>].r; j &gt; q[i].r; --j) &#123;</div><div class="line">					q[i].ans -= cnt[le[j] ^ K];</div><div class="line">					cnt[le[j]]--;</div><div class="line">					<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</div><div class="line">						q[i].ans++;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (q[i].l &gt; q[i - <span class="number">1</span>].l) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = q[i - <span class="number">1</span>].l - <span class="number">1</span>; j &lt;= q[i].l - <span class="number">2</span>; ++j) &#123;</div><div class="line">					q[i].ans -= cnt[le[j] ^ K];</div><div class="line">					cnt[le[j]]--;</div><div class="line">					<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</div><div class="line">						q[i].ans++;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (q[i].l &lt; q[i - <span class="number">1</span>].l)&#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = q[i - <span class="number">1</span>].l - <span class="number">2</span>; j &gt;= q[i].l - <span class="number">1</span>; --j) &#123;</div><div class="line">					q[i].ans += cnt[le[j] ^ K];</div><div class="line">					cnt[le[j]]++;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sort(q + <span class="number">1</span>, q + M + <span class="number">1</span>, cmp);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= M; ++i) &#123;</div><div class="line">			<span class="built_in">cout</span> &lt;&lt; q[i].ans &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>感觉到自己的分析能力很弱，E题纸都画花了还调了半天才把答案凑出来。公式推导，等式转化的能力不强，边界处理又被绕晕了，做出来之后反过来想想并不难，但就是很难一步想到点子上，可能还是缺乏大量的练习吧。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -654,21 +370,38 @@
       
 
       
-
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/15/谈谈反智主义/" rel="prev" title="谈谈反智主义">
+                谈谈反智主义 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -676,6 +409,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -695,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -740,6 +486,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Elephant"><span class="nav-number">1.</span> <span class="nav-text">A. Elephant</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Chocolate"><span class="nav-number">2.</span> <span class="nav-text">B. Chocolate</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意-1"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-1"><span class="nav-number">2.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Watering-Flowers"><span class="nav-number">3.</span> <span class="nav-text">C. Watering Flowers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意-2"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-2"><span class="nav-number">3.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-2"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Polyline"><span class="nav-number">4.</span> <span class="nav-text">D. Polyline</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意-3"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-3"><span class="nav-number">4.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-3"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-XOR-and-Favorite-Number"><span class="nav-number">5.</span> <span class="nav-text">E. XOR and Favorite Number</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意-4"><span class="nav-number">5.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-4"><span class="nav-number">5.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-4"><span class="nav-number">5.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -853,6 +615,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
