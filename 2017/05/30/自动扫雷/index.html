@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/img/2/1.png">
 <meta property="og:image" content="http://yoursite.com/img/2/2.png">
 <meta property="og:image" content="http://yoursite.com/img/2/2.png">
-<meta property="og:updated_time" content="2017-05-30T01:45:00.273Z">
+<meta property="og:updated_time" content="2017-05-30T10:49:07.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动扫雷">
 <meta name="twitter:description" content="突然有种把小时候玩过的游戏们写成代码的冲动，但是实现个单纯的游戏实在无趣，大部分都是画界面的活，对基本的算法能力考察接近于零。于是决定实现游戏的AI，在代码中注入我曾经玩游戏时的逻辑。 某一时刻，突然想起了“扫雷”，一直被称作是经典益智游戏，时不时看到几个无聊的同学会在实验室没法联网的xp古董机上面兴趣盎然地扫雷。打开电脑，惊奇地发现win10居然不带扫雷，无奈之下只能另觅他处。于是惊喜地">
@@ -329,7 +329,9 @@
 <p>某一时刻，突然想起了“扫雷”，一直被称作是经典益智游戏，时不时看到几个无聊的同学会在实验室没法联网的xp古董机上面兴趣盎然地扫雷。打开电脑，惊奇地发现win10居然不带扫雷，无奈之下只能另觅他处。于是惊喜地发现之前只是装着玩玩的xp虚拟机终于派上用场了，不光能玩扫雷，直接把虚拟机里的exe拖到win10下面居然也能跑起来。想想也对，向后兼容嘛。</p>
 <h3 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h3><h4 id="高级模式"><a href="#高级模式" class="headerlink" title="高级模式"></a>高级模式</h4>
 <div align="center">
-<video src="/video/1/1.mp4" controls autobuffer=""></video>
+<video src="/video/1/1.mp4" controls autobuffer="">
+您的浏览器不支持该视频。
+</video>
 </div>
 
 <h4 id="英雄榜"><a href="#英雄榜" class="headerlink" title="英雄榜"></a>英雄榜</h4>
@@ -388,7 +390,7 @@
 <div align="center">
 <br>\(x_1+x_2+x_3+x_4=2\)<br>\(x_1+x_2+x_3+x_5=3\)<br>
 </div>
-<br>逻辑正常的人类不难作出\(x_4=0\)和\(x_5=1\)的推断，但是参照之前的转化方案，我们无法将第一个式子转化为有效且简单的逻辑命题，因缺少了部分信息而 而导致无法作出正确推断。或许可以说“当其中任意两个为雷时则剩余两个均非雷”，这是个正确的推断，但这只是考虑等式右边为2的情况，还需考虑3，4，5等更大数字，无疑会大大增加算法时空复杂度和编码复杂度。</p>
+<br>逻辑正常的人类不难作出\(x_4=0\)和\(x_5=1\)的推断，但是参照之前的转化方案，我们无法将第一个式子转化为有效且简单的逻辑命题，因缺少了部分信息而导致无法作出正确推断。或许可以说“当其中任意两个为雷时则剩余两个均非雷”，这是个正确的推断，但这只是考虑等式右边为2的情况，还需考虑3，4，5等更大数字，无疑会大大增加算法时空复杂度和编码复杂度。</p>
 <p>实践证明以上8条逻辑推断对于一个并不追求完美的算法已然够用。</p>
 <h5 id="随机扫雷"><a href="#随机扫雷" class="headerlink" title="随机扫雷"></a>随机扫雷</h5><p>当局面焦灼时，即无非雷块可选择时，则不得不采用随机数大法，从未知块中随机挑选一个，把命运交给老天爷。</p>
 <p>实践证明这个方法在初级和中级的扫雷中屡试不爽，完全够用，但是到了高级就没那么幸运了。</p>
