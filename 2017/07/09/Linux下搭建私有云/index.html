@@ -1,0 +1,704 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="受气与各大云盘的龟速上传下载速度和略不友好的文件UI，一直想自己搭个私有云盘用于工作学习。无意中看到阿里云搞活动，租了个oss试试水。 租用oss云服务后，通过官方release包 + README即可完成搭建。搭建后可像本地文件系统一样操作，读小文件基本不用缓冲时间，读大文件或写入文件时速度取决于网速，但一般快过各大网盘。 我下载的是ossfs_1.80.2_ubuntu16.04_amd64.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下搭建私有云">
+<meta property="og:url" content="http://yoursite.com/2017/07/09/Linux下搭建私有云/index.html">
+<meta property="og:site_name" content="路 | Journey">
+<meta property="og:description" content="受气与各大云盘的龟速上传下载速度和略不友好的文件UI，一直想自己搭个私有云盘用于工作学习。无意中看到阿里云搞活动，租了个oss试试水。 租用oss云服务后，通过官方release包 + README即可完成搭建。搭建后可像本地文件系统一样操作，读小文件基本不用缓冲时间，读大文件或写入文件时速度取决于网速，但一般快过各大网盘。 我下载的是ossfs_1.80.2_ubuntu16.04_amd64.">
+<meta property="og:updated_time" content="2017-07-09T07:34:02.983Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux下搭建私有云">
+<meta name="twitter:description" content="受气与各大云盘的龟速上传下载速度和略不友好的文件UI，一直想自己搭个私有云盘用于工作学习。无意中看到阿里云搞活动，租了个oss试试水。 租用oss云服务后，通过官方release包 + README即可完成搭建。搭建后可像本地文件系统一样操作，读小文件基本不用缓冲时间，读大文件或写入文件时速度取决于网速，但一般快过各大网盘。 我下载的是ossfs_1.80.2_ubuntu16.04_amd64.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/09/Linux下搭建私有云/"/>
+
+
+
+
+
+  <title>Linux下搭建私有云 | 路 | Journey</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">路 | Journey</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/09/Linux下搭建私有云/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xuenene">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xuenene.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="路 | Journey">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux下搭建私有云</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T15:28:07+08:00">
+                2017-07-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>受气与各大云盘的龟速上传下载速度和略不友好的文件UI，一直想自己搭个私有云盘用于工作学习。无意中看到阿里云搞活动，租了个oss试试水。</p>
+<p>租用oss云服务后，通过官方<a href="https://github.com/aliyun/ossfs/releases" target="_blank" rel="external">release包</a> + <a href="https://github.com/aliyun/ossfs/" target="_blank" rel="external">README</a>即可完成搭建。搭建后可像本地文件系统一样操作，读小文件基本不用缓冲时间，读大文件或写入文件时速度取决于网速，但一般快过各大网盘。</p>
+<p>我下载的是<a href="/aliyun/ossfs/releases/download/v1.80.2/ossfs_1.80.2_ubuntu16.04_amd64.deb">ossfs_1.80.2_ubuntu16.04_amd64.deb</a>。</p>
+<h3 id="租用oss云服务"><a href="#租用oss云服务" class="headerlink" title="租用oss云服务"></a>租用oss云服务</h3><p>笔者租的是的是阿里云服务器，100G ￥9.00/年（搞活动挺划算），其余全部选择默认配置。付款后进入控制台，此时之前未开通过oss服务的应该会提示开通才能使用。申请开通后<strong>新建一个Bucket并记下</strong>（相当于一个盘符，客户端访问时需要使用这个Bucket），右上角的“获取accesskey”进入后<strong>记下ID和secret</strong>，后面会用到。在主界面点击进入Bucket，选择“Bucket属性-&gt;域名管理”，<strong>记下外网域名</strong>，后面会用到。</p>
+<p>云端操作完成。</p>
+<h3 id="挂载至本地"><a href="#挂载至本地" class="headerlink" title="挂载至本地"></a>挂载至本地</h3><ul>
+<li><strong>笔者使用的是ubuntu16.04，其他版本的Linux系统请参考官网。</strong></li>
+<li><strong>参数中涉及的路径都应为相对路径，执行命令时需注意当前目录。</strong></li>
+<li><strong>在执行命令的过程中随时可能出现权限不够的问题，建议直接切换至root权限下进行操作</strong>。<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install gdebi-core</div><div class="line">sudo gdebi ossfs_1.80.2_ubuntu16.04_amd64.deb</div></pre></td></tr></table></figure>
+<h4 id="运行ossfs"><a href="#运行ossfs" class="headerlink" title="运行ossfs"></a>运行ossfs</h4><p>把bucket，ID和secret写入文件etc/passwd-ossfs文件中（若提示不存在则新建之）</p>
+<p>如 <strong>bucket = disk，ID = bob，secret = abc</strong> 则<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo disk:bob:abc &gt; /etc/passwd-ossfs</div></pre></td></tr></table></figure></p>
+<p>设置passwd-ossfs文件权限<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 640 /etc/passwd-ossfs</div></pre></td></tr></table></figure></p>
+<h4 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h4><p>新建一个目录（任意位置和名字均可）<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir /home/ossfs</div></pre></td></tr></table></figure></p>
+<p>如 <strong>Bucket = disk，目录相对路径为 = /home/ossfs，外网域名去掉之前的Bucket = <a href="http://oss-cn-hangzhou.aliyuncs.com" target="_blank" rel="external">http://oss-cn-hangzhou.aliyuncs.com</a></strong> 则<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ossfs disk /home/ossfs -ourl=http://oss-cn-hangzhou.aliyuncs.com</div></pre></td></tr></table></figure></p>
+<p>此时此文件夹存在访问限制，非root用户无法访问。若需<strong>对任意用户开放</strong>，则应加个配置属性<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ossfs disk /home/ossfs -ourl=http://oss-cn-hangzhou.aliyuncs.com -o allow_other</div></pre></td></tr></table></figure></p>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>使用完毕若需卸载（或重新挂载新的目录）。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">umount /home/ossfs</div></pre></td></tr></table></figure></p>
+<h3 id="自动挂载"><a href="#自动挂载" class="headerlink" title="自动挂载"></a>自动挂载</h3><p>挂载相当于一个进程，重启后挂载进程需要重新运行，可以设置开机时运行命令自动挂载。</p>
+<p>在/etc/fstab中加入下面的命令（需root权限可写）<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">ossfs#</span>disk home/ossfs fuse _netdev, url=http://oss-cn-hangzhou.aliyuncs.com, allow_other 0 0</div></pre></td></tr></table></figure></p>
+<p>执行命令<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount -a</div></pre></td></tr></table></figure></p>
+<p>如果没有报错，则说明设置正常。</p>
+<p>重启，试试UI界面下ossfs文件夹可否正常浏览。</p>
+<p>如何还有别的问题，可参考官方<a href="https://github.com/aliyun/ossfs/wiki/FAQ" target="_blank" rel="external">FAQ</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://github.com/aliyun/ossfs/" target="_blank" rel="external">https://github.com/aliyun/ossfs/</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/02/关于容大退赛事件的一点感想/" rel="next" title="关于容大退赛事件的一点感想">
+                <i class="fa fa-chevron-left"></i> 关于容大退赛事件的一点感想
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/xuenene.jpg"
+               alt="xuenene" />
+          <p class="site-author-name" itemprop="name">xuenene</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#租用oss云服务"><span class="nav-number">1.</span> <span class="nav-text">租用oss云服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载至本地"><span class="nav-number">2.</span> <span class="nav-text">挂载至本地</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行ossfs"><span class="nav-number">2.2.</span> <span class="nav-text">运行ossfs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载"><span class="nav-number">2.3.</span> <span class="nav-text">挂载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载"><span class="nav-number">2.4.</span> <span class="nav-text">卸载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动挂载"><span class="nav-number">3.</span> <span class="nav-text">自动挂载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuenene</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
