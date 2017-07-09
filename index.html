@@ -322,7 +322,7 @@
             <p>受气与各大云盘的龟速上传下载速度和略不友好的文件UI，一直想自己搭个私有云盘用于工作学习。无意中看到阿里云搞活动，租了个oss试试水。</p>
 <p>租用oss云服务后，通过官方<a href="https://github.com/aliyun/ossfs/releases" target="_blank" rel="external">release包</a> + <a href="https://github.com/aliyun/ossfs/" target="_blank" rel="external">README</a>即可完成搭建。搭建后可像本地文件系统一样操作，读小文件基本不用缓冲时间，读大文件或写入文件时速度取决于网速，但一般快过各大网盘。</p>
 <p>我下载的是<a href="/aliyun/ossfs/releases/download/v1.80.2/ossfs_1.80.2_ubuntu16.04_amd64.deb">ossfs_1.80.2_ubuntu16.04_amd64.deb</a>。</p>
-<h3 id="租用oss云服务"><a href="#租用oss云服务" class="headerlink" title="租用oss云服务"></a>租用oss云服务</h3><p>笔者租的是的是阿里云服务器，100G ￥9.00/年（搞活动挺划算），其余全部选择默认配置。付款后进入控制台，此时之前未开通过oss服务的应该会提示开通才能使用。申请开通后<strong>新建一个Bucket并记下</strong>（相当于一个盘符，客户端访问时需要使用这个Bucket），右上角的“获取accesskey”进入后<strong>记下ID和secret</strong>，后面会用到。在主界面点击进入Bucket，选择“Bucket属性-&gt;域名管理”，<strong>记下外网域名</strong>，后面会用到。</p>
+<h3 id="租用oss云服务"><a href="#租用oss云服务" class="headerlink" title="租用oss云服务"></a>租用oss云服务</h3><p>我租的是的是阿里云服务器，100G ￥9.00/年（搞活动挺划算），其余全部选择默认配置。付款后进入控制台，此时之前未开通过oss服务的应该会提示开通才能使用。申请开通后<strong>新建一个Bucket并记下</strong>（相当于一个盘符，客户端访问时需要使用这个Bucket），右上角的“获取accesskey”进入后<strong>记下ID和secret</strong>，后面会用到。在主界面点击进入Bucket，选择“Bucket属性-&gt;域名管理”，<strong>记下外网域名</strong>，后面会用到。</p>
 <p>云端操作完成。</p>
 <h3 id="挂载至本地"><a href="#挂载至本地" class="headerlink" title="挂载至本地"></a>挂载至本地</h3><ul>
 <li><strong>笔者使用的是ubuntu16.04，其他版本的Linux系统请参考官网。</strong></li>
